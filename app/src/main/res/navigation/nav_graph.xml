@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/fragmentLogin">
+
+    <fragment
+        android:id="@+id/fragmentLogin"
+        android:name="com.example.gerenciadortarefas.ui.FragmentLogin"
+        android:label="Login">
+        <action
+            android:id="@+id/action_login_to_cadastro"
+            app:destination="@id/fragmentCadastroUsuario" />
+        <action
+            android:id="@+id/action_login_to_listaTarefas"
+            app:destination="@id/fragmentListaTarefas" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentCadastroUsuario"
+        android:name="com.example.gerenciadortarefas.ui.FragmentCadastroUsuario"
+        android:label="Cadastro de Usuário">
+        <action
+            android:id="@+id/action_cadastro_to_login"
+            app:destination="@id/fragmentLogin" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentListaTarefas"
+        android:name="com.example.gerenciadortarefas.ui.FragmentListaTarefas"
+        android:label="Lista de Tarefas">
+        <action
+            android:id="@+id/action_listaTarefas_to_novaTarefa"
+            app:destination="@id/fragmentNovaTarefa" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentNovaTarefa"
+        android:name="com.example.gerenciadortarefas.ui.FragmentNovaTarefa"
+        android:label="Nova Tarefa" />
+</navigation>
